@@ -83,34 +83,7 @@ public class MainActivityTab extends AppCompatActivity {
 
     }
 
-    private static final int PERMISSION_LOCATION_REQUEST = 0;
-    private static final int PERMISSION_WRITE_STORAGE_REQUEST = 1;
-    private static final int PERMISSION_REQUEST = 0;
     private boolean isPermissionGranted = true;
-    private String apiKey = null;
-    private void checkPermissionStatus() {
-        if (checkPermissions()) {
-        } else {
-            // All permissions are already granted we can start the SDK
-            initializeSdk();
-        }
-    }
-
-    @TargetApi(Build.VERSION_CODES.M)
-    private void displayPermissionsAlert(String title, String message, final String[] permissions) {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(title);
-        builder.setMessage(message);
-        builder.setPositiveButton(android.R.string.ok, null);
-        builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
-
-            @Override
-            public void onDismiss(DialogInterface dialog) {
-                requestPermissions(permissions, PERMISSION_REQUEST);
-            }
-        });
-        builder.show();
-    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode,
@@ -132,47 +105,6 @@ public class MainActivityTab extends AppCompatActivity {
             finish();
         }
     }
-
-    private boolean checkPermissions() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            final List<String> permissionsList = new ArrayList<String>();
-
-            StringBuilder message = new StringBuilder();
-            message.append("The application requires the following permissions: \n ");
-
-            if (!isPermissionGranted(Manifest.permission.ACCESS_FINE_LOCATION)) {
-                permissionsList.add(Manifest.permission.ACCESS_FINE_LOCATION);
-                message.append("\n - ACCESS_FINE_LOCATION in order to scan BLE and WIFI signals\n");
-
-            }
-
-            if (!isPermissionGranted(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-                permissionsList.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
-                message.append("\n - WRITE_EXTERNAL_STORAGE in order to write temporary files on the SD card \n");
-
-            }
-
-            if (!isPermissionGranted(Manifest.permission.READ_PHONE_STATE)) {
-                permissionsList.add(Manifest.permission.READ_PHONE_STATE);
-                message.append("\n - READ_PHONE_STATE to pause scans on phone calls \n");
-
-            }
-
-            if (!permissionsList.isEmpty()) {
-                displayPermissionsAlert("Permission required", message.toString(),
-                        permissionsList.toArray(new String[permissionsList.size()]));
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private boolean isPermissionGranted(String permission) {
-        int permissionCheck = ContextCompat.checkSelfPermission(this,
-                permission);
-        return permissionCheck == PackageManager.PERMISSION_GRANTED;
-    }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
