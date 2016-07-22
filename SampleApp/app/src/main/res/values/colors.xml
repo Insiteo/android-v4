@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#04617B</color>
+    <color name="colorPrimaryDark">#04617B</color>
+    <color name="colorTab">#04617B</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="button_1_normal_background">#04617B</color>
+    <color name="button_1_focused_background">#04617B</color>
+    <color name="button_1_selected_background">#04617B</color>
+
+    <color name="log_severe">#F44336</color>
+    <color name="log_warning">#0D47A1</color>
+    <color name="log_info">#4CAF50</color>
+    <color name="log_all">#212121</color>
+
+</resources>

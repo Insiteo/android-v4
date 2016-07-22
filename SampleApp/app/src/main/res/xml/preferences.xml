@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference android:title="Start"
+        android:defaultValue="true"
+        android:summary="Will start/stop the Push module."
+        android:key="pushmodule" />
+    <Preference android:title="Reset Cache"
+        android:key="@string/preference_reset_button"
+        android:summary="Will reset every states (groups, actions and triggers)"/>
+</PreferenceScreen>

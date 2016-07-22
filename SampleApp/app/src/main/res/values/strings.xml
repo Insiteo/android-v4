@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">V4 Sample App</string>
+	
+	<string name="tab_client">Client</string>
+    <string name="tab_log">Log</string>
+    <string name="tab_push">Push</string>
+    <string name="preference_reset_button">Reset Cache</string>
+
+    <string name="disconect">Se Déconnecter</string>
+    <string name="update">Mettre à jour</string>
+
+</resources>
