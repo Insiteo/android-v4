@@ -114,8 +114,4 @@ As the `start()` method, each module can be stopped or clean individually by cal
 ## Where To Go From Here?
 
 - [Analytics: Track Custom Events](https://github.com/Insiteo/android-v4/blob/master/analytics.md).
-- [Push: Add Location Based Interactions To Your App](https://github.com/Insiteo/android-v4/blob/master/push.md).
-
-## Where To Go From Here?
-
-- Read the [Getting Ready guide](https://github.com/Insiteo/android-v4/blob/master/getting-ready.md).
+- [Push: Customize push interactions](https://github.com/Insiteo/android-v4/blob/master/push.md).

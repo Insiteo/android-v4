@@ -107,3 +107,7 @@ private boolean isPermissionGranted = true;
                     Insiteo.getManager().updateSettings();
     }
 ```
+
+## Where To Go From Here?
+
+- Read the [Getting Ready guide](https://github.com/Insiteo/android-v4/blob/master/getting_ready.md).
