@@ -1,4 +1,4 @@
-# Getting Started with Insiteo iOS SDK
+# Getting Started with Insiteo Android SDK
 
 This is a guide to help developers get up to speed with Insiteo SDK. It will present all basic steps to initialize and interact properly with the SDK.
 
